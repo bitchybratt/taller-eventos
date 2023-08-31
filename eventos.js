@@ -1,5 +1,10 @@
-const divElement = document.getElementById('div1');
+const div = document.getElementById('div1');
 
-divElement.addEventListener('click', function() {
-    alert('Hola! Soy el div')
+div.addEventListener('click', function(event) {
+    if (event.target !== document.getElementById('div1')) {
+        return
+    } else {
+        return alert('Hola! Soy el div')
+    }
 });
+
